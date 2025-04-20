@@ -1,0 +1,29 @@
+services:
+  app1:
+    image: honojs
+    ports:
+      - "3001:3000"
+    environment:
+      - APP_NAME=App 1
+  app2:
+    image: honojs
+    environment:
+      - APP_NAME=App 2
+    ports:
+      - "3002:3000"
+  app3:
+    image: honojs
+    environment:
+      - APP_NAME=App 3
+    ports:
+      - "3003:3000"
+  app4:
+    image: honojs
+    environment:
+      - APP_NAME=App 4
+    ports:
+      - "3004:3000"
+  nginx:
+    image: nginx
+    ports:
+      - "3000:3000"
